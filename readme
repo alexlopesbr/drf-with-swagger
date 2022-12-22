@@ -1,0 +1,33 @@
+
+# Rodando o Redis
+Depois de baixado no local escolhido
+- Local:
+    ```
+    /Users/stoodi/ale/Alura/drf_lapidacoes-projeto_inicial/redis-7.0.7
+    ````
+
+- Comando:
+    ```
+        src/redis-server
+    ```
+
+# Atribuindo e editando um Locale
+- Adicionando o middleware
+    ```
+    MIDDLEWARE = [
+        ...
+        'django.middleware.locale.LocaleMiddleware'
+    ]
+    ```
+- Criar a pasta `locale`
+
+    A pasta deve ser criada no roo do projeto
+
+- Gerar o locale no Django:
+    ```
+    python manage.py makemessages -l pt_BR
+    ```
+- Atualizando as mensagens personalizadas no arquivo `django.po`
+    ```
+    python manage.py compilemessages -l pt_BR
+    ```
