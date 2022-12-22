@@ -12,15 +12,15 @@ from drf_yasg import openapi
 
 schema_view = get_schema_view(
    openapi.Info(
-      title="Snippets API",
+      title="Swagger Study Project",
       default_version='v1',
-      description="Test description",
+      description="Study case for Swagger integration with Django REST framework",
       terms_of_service="https://www.google.com/policies/terms/",
       contact=openapi.Contact(email="contact@snippets.local"),
       license=openapi.License(name="BSD License"),
    ),
-   public=True,
-   permission_classes=[permissions.AllowAny],
+   public=False,
+   permission_classes=[permissions.IsAdminUser],
 )
 
 router = routers.DefaultRouter()
